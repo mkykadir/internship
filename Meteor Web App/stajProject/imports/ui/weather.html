@@ -1,0 +1,43 @@
+<template name="weather">
+  {{#if showTheMessageBox}}
+  <div id="add-box" class="message-box">
+    <h1>İçerik Ekle</h1>
+    <form name="add-box-form">
+        <label for="data-selector">Data:</label>
+        <select id="dataselect" name="data-selector" required>
+          {{#each getOptions}}
+            <option value="{{value}}">{{text}}</option>
+          {{/each}}
+        </select><br/>
+      <button type="button" id="addbox-add">Ekle</button>
+      <button type="button" class="cancel" id="addbox-cancel">İptal</button>
+    </form>
+  </div>
+  {{/if}}
+
+  <div class="top-part">
+    <ul class="menu">
+      <li id="add-menu">+ <span class="text">Ekle</span></li>
+      <li id="edit-menu">&#9779; <span class="text">Düzenle</span></li>
+    </ul>
+  </div>
+  <div class="contents">
+    <ul>
+    {{#each weatherdb}}
+      <li class="weatherlistItem">
+        <img src="{{ image }}" alt="weather-image" />
+        <h1>{{ temp }} &#176;C</h1>
+        <p>{{ city }}</p>
+        <!--
+        <hr>
+        <p class="leftside-p">En Yüksek: {{ high }} &#176;C</p>
+        <p class="leftside-p">En Düşük: {{ low }} &#176;C</p>
+        <p class="leftside-p">Basınç: {{ pressure }} hPa</p>
+        <p class="leftside-p">Nem: {{ humidty }} %</p>
+        <p class="leftside-p">Yağmur: {{ rain }} mm</p>
+      -->
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+</template>

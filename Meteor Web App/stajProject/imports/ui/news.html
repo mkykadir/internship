@@ -1,0 +1,22 @@
+<template name="news">
+  <div class="top-part">
+    <ul class="menu">
+      <li id="refresh-menu"><span class="text">Yenile</span></li>
+    </ul>
+  </div>
+  <div class="contents">
+    <ul class="newsul {{#if hideul}}hide{{/if}}">
+    {{#each newsdb}}
+      <li class="newlistItem">
+        <span class="clickable">
+          <img src="{{img}}" alt="haber-image" />
+          <h1>{{title}}</h1>
+          <p>{{content}}</p>
+          <p class="date-p">{{date}}</p>
+        </span>
+        <a href="{{link}}" target="_blank">Daha fazla oku...</a>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+</template>

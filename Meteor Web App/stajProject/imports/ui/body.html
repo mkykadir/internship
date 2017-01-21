@@ -1,0 +1,45 @@
+<body>
+  <navbar>
+    {{#if currentUser}}
+      <div class="openclose">
+        <img src="/img/menu-openclose.png" alt="menu-openclose" />
+      </div>
+    {{/if}}
+    <div class="top-part">
+      {{> loginButtons}}
+    </div>
+  </navbar>
+  {{#if currentUser}}
+    <div class="left-container {{#if hideMenu}}hidden{{/if}}">
+
+        <ul class="menu">
+          <!--<li id="liHome" class="{{#if isHome}}selected{{/if}}"><img src="/img/menu-home.png" alt="menu-home"/><span class="text">Giriş</span></li>-->
+          <li id="liWeather" class="{{#if isWeather}}selected{{/if}}"><img src="/img/menu-weather.png" alt="menu-weather"/><span class="text">Hava Durumu</span></li>
+          <li id="liCurrency" class="{{#if getPage}}selected{{/if}}"><img src="/img/menu-currency.png" alt="menu-currency"/><span class="text">Döviz ve Borsa</span></li>
+          <li id="liNews" class="{{#if getPage}}selected{{/if}}"><img src="/img/menu-news.png" alt="menu-news"/><span class="text">Haberler</span></li>
+          <!--<li id="liSocial" class="{{#if getPage}}selected{{/if}}"><img src="/img/menu-social.png" alt="menu-social"/><span class="text">Sosyal Ağ</span></li>-->
+        </ul>
+
+    </div>
+    <div class="right-container {{#if hideMenu}}hidden{{/if}}">
+        <!--{{#if isHome}}
+          {{> home}}
+        {{/if}}-->
+        {{#if isWeather}}
+          {{> weather}}
+        {{/if}}
+        {{#if isCurrency}}
+          {{> currency}}
+        {{/if}}
+        {{#if isNews}}
+          {{> news}}
+        {{/if}}
+    </div>
+  {{else}}
+    <div class="login-error">
+      <img src="/img/error-login.png" alt="error-login"/>
+      <h1>Giriş Yapın!</h1>
+      <p>İçeriği görüntülemek için sağ üst köşede bulunan düğme ile giriş yapın.</p>
+    </div>
+  {{/if}}
+</body>

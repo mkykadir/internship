@@ -1,0 +1,36 @@
+<template name="home">
+  {{#if showTheMessageBox}}
+  <div id="add-box" class="message-box">
+    <h1>İçerik Ekle</h1>
+    <form name="add-box-form">
+        <label for="type-selector">Tip:</label>
+        <select id="typeselect" name="type-selector" required>
+          <option value="weather">Hava Durumu</option>
+          <option value="currency">Döviz ve Borsa</option>
+          <option value="news">Haberler</option>
+          <option value="social">Sosyal Ağ</option>
+        </select><br/>
+        <label for="data-selector">Data:</label>
+        <select id="dataselect" name="data-selector" required>
+          {{#each getOptions}}
+            <option value="{{value}}">{{text}}</option>
+          {{/each}}
+        </select><br/>
+      <button type="button" id="addbox-add">Ekle</button>
+      <button type="button" class="cancel" id="addbox-cancel">İptal</button>
+    </form>
+  </div>
+  {{/if}}
+
+  <div class="top-part">
+    <ul class="menu">
+      <li id="add-menu">+ <span class="text">Ekle</span></li>
+      <li id="edit-menu">&#9779; <span class="text">Düzenle</span></li>
+    </ul>
+  </div>
+  <div class="contents">
+    {{#each maingriddb}}
+      {{> weatherinside}}
+    {{/each}}
+  </div>
+</template>

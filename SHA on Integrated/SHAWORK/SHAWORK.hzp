@@ -1,0 +1,43 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="SHAWORK" target="19" version="2">
+  <project Name="SHAWORK">
+    <configuration
+      Name="Common"
+      Platform="MAXQ30"
+      Target="MAXQ1850"
+      linker_memory_map_file="$(PackagesDir)/targets/maxq30/MAXQ1850.xml"
+      linker_section_placement_file="$(StudioDir)/targets/section_placement.xml"
+      project_directory=""
+      project_type="Executable"
+      simulator_DLL_FileName="$(PackagesDir)/targets/maxq30/maxq1850sim$(HostDLL)"
+      simulator_DLL_RomFileName="$(PackagesDir)/targets/maxq30/romq30.hex"
+      target_erase_script="OnErase()" />
+    <folder Name="Source Files">
+      <configuration Name="Common" filter="c;h;s;asm;inc" />
+      <file file_name="main.c" />
+      <file file_name="serial.c" />
+      <file file_name="sha.c" />
+      <file file_name="shahw_maxq1850.c" />
+    </folder>
+    <folder Name="System Files">
+      <configuration Name="Common" filter="xml" />
+      <file file_name="$(PackagesDir)/targets/maxq30/crt0.asm" />
+      <file file_name="$(PackagesDir)/targets/maxq30/MAXQ30_Target.js">
+        <configuration Name="Common" file_type="Target Script" />
+      </file>
+    </folder>
+  </project>
+  <configuration
+    Name="MAXQ30 Debug"
+    inherited_configurations="MAXQ30;Debug" />
+  <configuration Name="MAXQ30" Platform="MAXQ30" hidden="Yes" />
+  <configuration Name="Debug" build_debug_information="Yes" hidden="Yes" />
+  <configuration
+    Name="MAXQ30 Release"
+    inherited_configurations="MAXQ30;Release" />
+  <configuration
+    Name="Release"
+    build_debug_information="No"
+    c_preprocessor_definitions="NDEBUG"
+    hidden="Yes" />
+</solution>

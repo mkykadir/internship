@@ -1,0 +1,9 @@
+c:\users\mkyka\documents\visual studio 2015\Projects\serialHashMaxq\serialHashMaxq\bin\Debug\serialHashMaxq.exe.config
+c:\users\mkyka\documents\visual studio 2015\Projects\serialHashMaxq\serialHashMaxq\bin\Debug\serialHashMaxq.exe
+c:\users\mkyka\documents\visual studio 2015\Projects\serialHashMaxq\serialHashMaxq\bin\Debug\serialHashMaxq.pdb
+c:\users\mkyka\documents\visual studio 2015\Projects\serialHashMaxq\serialHashMaxq\obj\Debug\serialHashMaxq.csprojResolveAssemblyReference.cache
+c:\users\mkyka\documents\visual studio 2015\Projects\serialHashMaxq\serialHashMaxq\obj\Debug\serialHashMaxq.mainForm.resources
+c:\users\mkyka\documents\visual studio 2015\Projects\serialHashMaxq\serialHashMaxq\obj\Debug\serialHashMaxq.Properties.Resources.resources
+c:\users\mkyka\documents\visual studio 2015\Projects\serialHashMaxq\serialHashMaxq\obj\Debug\serialHashMaxq.csproj.GenerateResource.Cache
+c:\users\mkyka\documents\visual studio 2015\Projects\serialHashMaxq\serialHashMaxq\obj\Debug\serialHashMaxq.exe
+c:\users\mkyka\documents\visual studio 2015\Projects\serialHashMaxq\serialHashMaxq\obj\Debug\serialHashMaxq.pdb

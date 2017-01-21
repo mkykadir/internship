@@ -1,0 +1,43 @@
+<template name="currency">
+  {{#if showTheMessageBox}}
+  <div id="add-box" class="message-box">
+    <h1>İçerik Ekle</h1>
+    <form name="add-box-form">
+        <select id="fromselect" name="from-selector" required>
+          {{#each getOptions}}
+            <option value="{{value}}">{{text}}</option>
+          {{/each}}
+        </select>-
+        <select id="toselect" name="to-selector" required>
+          {{#each getOptions}}
+            <option value="{{value}}">{{text}}</option>
+          {{/each}}
+        </select><br/>
+      <button type="button" id="addbox-add">Ekle</button>
+      <button type="button" class="cancel" id="addbox-cancel">İptal</button>
+    </form>
+  </div>
+  {{/if}}
+
+  <div class="top-part">
+    <ul class="menu">
+      <li id="add-menu">+ <span class="text">Ekle</span></li>
+      <li id="edit-menu">&#9779; <span class="text">Düzenle</span></li>
+    </ul>
+  </div>
+  <div class="contents">
+    <ul>
+    {{#each currencydb}}
+      <li class="currencylistItem">
+        <img src="/img/{{from}}.png" alt="currency-from" />-
+        <img src="/img/{{to}}.png" alt="currency-to" />
+        <h1>{{price}}</h1>
+        <p>{{from}} - {{to}}</p>
+        <hr>
+        <h2>Değişim:</h2>
+        <p>{{amount}} - {{rate}}</p>
+      </li>
+    {{/each}}
+    </ul>
+  </div>
+</template>
